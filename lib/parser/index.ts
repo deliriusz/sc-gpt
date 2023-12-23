@@ -1,1 +1,1 @@
-export * from "lib/parser/parser.ts"
+export * from "./solidityParser"

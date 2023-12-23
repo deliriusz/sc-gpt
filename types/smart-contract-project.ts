@@ -1,5 +1,6 @@
 type Modifier =  {
     name: string
+    contents: string
 }
 
 type Function = {
@@ -8,10 +9,10 @@ type Function = {
     contents: string
     visibility: 'default' | 'external' | 'internal' | 'public' | 'private'
     modifiers: Modifier []
-    // isConstructor: boolean
-    // isReceiveEther: boolean
-    // isFallback: boolean
-    // isVirtual: boolean
+    isConstructor: boolean
+    isReceiveEther: boolean
+    isFallback: boolean
+    isVirtual: boolean
 }
 
 type SmartContract = {
@@ -20,6 +21,28 @@ type SmartContract = {
     contents: string
     kind: 'library' | 'interface' | 'contract'
     functions: Function []
+    imports: string []
+}
+
+type CallContext = {
+    contract: string,
+    function: string
+}
+
+type FunctionCall = {
+    callerContract: string,
+    callerFunction: string,
+    calleeContract: string,
+    calleeFunction: string,
+    hasValue: boolean
+}
+
+type LowLevelCall = {
+    callerContract: string,
+    callerFunction: string,
+    calleeContractAddress: string,
+    callType: 'call' | 'delegatecall' | 'staticcall'
+    hasValue: boolean
 }
 
 type SmartContractProject = {

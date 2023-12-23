@@ -14,7 +14,7 @@
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true
    },
-   "files": [ ],
+   // "files": [ ],
    "include": [
       "lib/**/*.ts",
       "test/**/*"
