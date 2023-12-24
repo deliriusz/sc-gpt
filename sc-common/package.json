@@ -1,0 +1,21 @@
+{
+  "name": "sc-gpt-common",
+  "version": "1.0.0",
+  "types": "./index.d.ts",
+  "authors": [
+    "deliriusz.eth"
+  ],
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "ts-node": "^10.8.1",
+    "tsc": "^2.0.4"
+  },
+  "scripts": {
+    "compile": "yarn tsc --project tsconfig.json"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.19",
+    "typescript": "^4.7.4"
+  }
+}
